@@ -1,0 +1,196 @@
+@import 'maps.less';
+@import 'variaveis.less';
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1024px)";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: @fontPrincipal;
+}
+body{
+    background-color: #colors[colorPrincipal];
+    
+}
+header{
+    color: #colors[colorPrincipal];
+    background-color: #colors[colorHeader];
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    
+    h1{
+        font-size: 80px;
+        
+        @media @breakpointTablet{
+            font-size: 40px;
+        }
+        @media @breakpointMobile{
+            font-size: 25px;
+        }
+    }
+    a{
+        font-size: 25px;
+        position: absolute;
+        left: 10px;
+        text-decoration: none;
+        color: #colors[colorPrincipal];
+        transition: filter 0.3s ease;
+
+        @media @breakpointMobile{
+            left: 15px;
+        }
+
+        span{
+            @media @breakpointMobile {
+                display: none;
+            }
+        }
+
+        &:hover{   
+            color: #colors[colorPrincipal] ;
+            filter: brightness(1.5);
+        }
+    }
+}
+main{
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    
+    .container-formarea, 
+    .container-formedia{
+        flex-direction: column;
+
+        button{
+            padding: 10px;
+            font-family: @fontTexts;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #colors[colorButton];
+            border: none;
+            transition: all ease .6s;
+            
+            &:hover{
+                background-color: #colors[colorButton];
+                filter: brightness(1.3);
+            }
+        }
+    }
+
+    .row.mt-5{
+        height: 75vh;
+
+        .col{
+            flex-direction: column;
+            a{
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                padding: 25px;
+                background-color: #colors[colorButton];
+                color: #colors[colorPrincipal];
+                font-weight: bold;
+                transition: all ease .4s;
+                border: 3px solid #colors[colorButton];
+
+                @media @breakpointTablet{
+                    width: 80%;
+                }
+
+                @media @breakpointMobile{
+                    width: 75%;
+                    padding: 15px;
+                }
+                
+                &:hover{
+                    border: none;
+                    background-color: transparent;
+                    border-bottom: 3px solid #colors[colorButton];
+                    border-top: 3px solid #colors[colorButton];
+                    color: #colors[colorButton];
+                }
+            }
+        }
+    }
+    .container-formedia{
+        height: 70vh;
+
+        .row{
+            .col-3{
+                display: block;
+                width: 100%;
+
+            }
+            form{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px
+            }
+            
+            .form-label{
+                font-size: 30px;
+                color: #fff;
+
+                @media @breakpointMobile{
+                    font-size: 20px;
+                }
+            }
+            .form-control{
+                margin-top: 10px;
+                height: 70px;
+                background-color: transparent;
+                border: none;
+                font-size: 25px;
+                color: #fff;
+                text-align: center;
+                border-bottom: 4px solid white;
+            }
+            button{
+                grid-column: 1 / -1; 
+                width: 100%;
+            }
+        }
+    }
+    .container-formarea{
+        height: 70vh;
+
+        .row{
+            
+            .form-label{
+                font-size: 30px;
+                color: #fff;
+            }
+            .form-control{
+                margin-top: 10px;
+                height: 70px;
+                background-color: transparent;
+                border: none;
+                font-size: 25px;
+                color: #fff;
+                text-align: center;
+                border-bottom: 4px solid white;
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+    .resultado-area,
+    .resultado-media{
+
+        font-size: 34px;
+        border-bottom: 4px solid #colors[colorText];
+        color: #colors[colorText];
+        display: none;
+
+        @media @breakpointMobile {
+            width: 80%;
+            
+        }
+    }
+}
+
