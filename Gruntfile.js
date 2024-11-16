@@ -45,10 +45,6 @@ module.exports = function(grunt) {
                             replacement: './styles/main.css'
                         },
                         {
-                            match: 'ENDERECO_DO_JS',
-                            replacement: '../src/scripts/main.js'
-                        },
-                        {
                             match: 'ENDERECO_DO_JSAREA',
                             replacement: '../src/scripts/areajs.js'
                         },
@@ -74,10 +70,6 @@ module.exports = function(grunt) {
                         {
                             match: 'ENDERECO_DO_CSS',
                             replacement: './styles/main.min.css'
-                        },
-                        {
-                            match: 'ENDERECO_DO_JS',
-                            replacement: './scripts/main.js'
                         },
                         {
                             match: 'ENDERECO_DO_JSAREA',
@@ -116,7 +108,6 @@ module.exports = function(grunt) {
         uglify: {
             target: {
                 files: {
-                    'dist/scripts/main.min.js': 'src/scripts/main.js',
                     'dist/scripts/mediajs.min.js': 'src/scripts/mediajs.js',
                     'dist/scripts/areajs.min.js': 'src/scripts/areajs.js'
                 }
