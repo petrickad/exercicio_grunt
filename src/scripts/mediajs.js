@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
             resultFinal = "Voce foi aprovado! Sua nota é: \n" + resultValues.toFixed(2);
         }
         else {
-            resultFinal = "Voce foi reprovado. Sua note é: \n" + resultValues.toFixed(2) + "pontos";
+            resultFinal = "Voce foi reprovado. Sua note é: \n" + resultValues.toFixed(2);
         }
         document.getElementById('resultado').innerText = resultFinal;
         document.querySelector('.resultado-media').style.display = 'block';

@@ -4,6 +4,27 @@
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(min-width: 768px) and (max-width: 1024px)";
 
+.estilos-form{
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 4px solid white;
+}
+.estilos-resultados{
+    font-size: 20px;
+    border-bottom: 4px solid #colors[colorText];
+    color: #colors[colorText];
+    display: none;
+    margin-top: 10x;
+
+    @media @breakpointMobile {
+        width: 80%;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -20,10 +41,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 30px;
     
     h1{
-        font-size: 80px;
+        font-size: 50px;
         
         @media @breakpointTablet{
             font-size: 40px;
@@ -33,7 +54,7 @@ header{
         }
     }
     a{
-        font-size: 25px;
+        font-size: 20px;
         position: absolute;
         left: 10px;
         text-decoration: none;
@@ -82,7 +103,7 @@ main{
     }
 
     .row.mt-5{
-        height: 75vh;
+        height: @heightDef;
 
         .col{
             flex-direction: column;
@@ -90,7 +111,7 @@ main{
                 text-decoration: none;
                 display: block;
                 width: 100%;
-                padding: 25px;
+                padding: 15px;
                 background-color: #colors[colorButton];
                 color: #colors[colorPrincipal];
                 font-weight: bold;
@@ -128,11 +149,11 @@ main{
             form{
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 20px
+                gap: 10px
             }
             
             .form-label{
-                font-size: 30px;
+                font-size: 20px;
                 color: #fff;
 
                 @media @breakpointMobile{
@@ -140,39 +161,26 @@ main{
                 }
             }
             .form-control{
-                margin-top: 10px;
-                height: 70px;
-                background-color: transparent;
-                border: none;
-                font-size: 25px;
-                color: #fff;
-                text-align: center;
-                border-bottom: 4px solid white;
+                .estilos-form();
             }
             button{
                 grid-column: 1 / -1; 
                 width: 100%;
+                padding: 2px;
             }
         }
     }
     .container-formarea{
-        height: 70vh;
+        height: @heightDef;
 
         .row{
             
             .form-label{
-                font-size: 30px;
+                font-size: 20px;
                 color: #fff;
             }
             .form-control{
-                margin-top: 10px;
-                height: 70px;
-                background-color: transparent;
-                border: none;
-                font-size: 25px;
-                color: #fff;
-                text-align: center;
-                border-bottom: 4px solid white;
+                .estilos-form();
             }
             button{
                 width: 100%;
@@ -181,16 +189,7 @@ main{
     }
     .resultado-area,
     .resultado-media{
-
-        font-size: 34px;
-        border-bottom: 4px solid #colors[colorText];
-        color: #colors[colorText];
-        display: none;
-
-        @media @breakpointMobile {
-            width: 80%;
-            
-        }
+        .estilos-resultados();
     }
 }
 
