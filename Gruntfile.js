@@ -73,11 +73,11 @@ module.exports = function(grunt) {
                         },
                         {
                             match: 'ENDERECO_DO_JSAREA',
-                            replacement: './scripts/areajs.js'
+                            replacement: './scripts/areajs.min.js'
                         },
                         {
                             match: 'ENDERECO_DO_JSMEDIA',
-                            replacement: './scripts/mediajs.js'
+                            replacement: './scripts/mediajs.min.js'
                         }
                     ]
                 },
